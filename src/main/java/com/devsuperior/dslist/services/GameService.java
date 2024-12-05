@@ -20,6 +20,7 @@ public class GameService {
 		
 		List<Game> resultado  = gameRepository.findAll();
 		
+		// O resultado da Entity Game será mapeada para GameMinDTO
 		return resultado.stream().map(x -> new GameMinDTO(x)).toList();
 		
 	
